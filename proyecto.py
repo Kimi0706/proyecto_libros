@@ -12,7 +12,7 @@ class BiblioManagerApp(ctk.CTk):
         super().__init__()
 
         # --- CONFIGURACIÓN DE LA VENTANA ---
-        self.title("BiblioManager Pro - Sistema de Gestión")
+        self.title("KimiLibrary Pro - Sistema de Gestión")
         self.geometry("600x650")
         self.resizable(False, False)
         self.archivo_csv = 'libros.csv'
@@ -21,7 +21,7 @@ class BiblioManagerApp(ctk.CTk):
         self.frame_header = ctk.CTkFrame(self, fg_color="transparent")
         self.frame_header.pack(pady=(15, 5))
 
-        self.lbl_titulo = ctk.CTkLabel(self.frame_header, text="📚 BiblioManager Pro", font=ctk.CTkFont(family="Arial", size=26, weight="bold"))
+        self.lbl_titulo = ctk.CTkLabel(self.frame_header, text="📚 KimiLibrary Pro", font=ctk.CTkFont(family="Arial", size=26, weight="bold"))
         self.lbl_titulo.pack()
         
         # --- SISTEMA DE PESTAÑAS (TABVIEW) ---
@@ -41,7 +41,7 @@ class BiblioManagerApp(ctk.CTk):
         self.frame_form = ctk.CTkFrame(self.tab_registro, corner_radius=10)
         self.frame_form.pack(pady=10, padx=20, fill="both", expand=True)
 
-        self.txt_codigo = self.crear_campo("Código del Libro (ISBN único):", self.frame_form)
+        self.txt_codigo = self.crear_campo("Código del libreta (ISBN único):", self.frame_form)
         self.txt_titulo = self.crear_campo("Título del Libro:", self.frame_form)
         self.txt_autor = self.crear_campo("Autor principal:", self.frame_form)
         self.txt_anio = self.crear_campo("Año de Publicación:", self.frame_form)
@@ -50,7 +50,7 @@ class BiblioManagerApp(ctk.CTk):
         lbl_cat = ctk.CTkLabel(self.frame_form, text="Categoría:", font=ctk.CTkFont(size=12, weight="bold"))
         lbl_cat.pack(anchor="w", padx=30, pady=(8, 2))
         
-        categorias = ["Ficción", "No Ficción", "Ciencia Ficción", "Historia", "Tecnología", "Fantasía", "Biografía"]
+        categorias = ["Ficción", "No Ficción", "Ciencia Ficción", "Historia", "Tecnología", "Fantasía", "Biografía", "Cuento", "Autobiografía", "Novela"]
         self.cmb_categoria = ctk.CTkComboBox(self.frame_form, values=categorias, width=440, state="readonly")
         self.cmb_categoria.pack(padx=30, pady=(0, 10))
         self.cmb_categoria.set("Ficción")
