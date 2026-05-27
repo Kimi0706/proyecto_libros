@@ -35,9 +35,7 @@ class BiblioManagerApp(ctk.CTk):
         # Configurar la acción al cambiar de pestaña para recargar la tabla
         self.tabview.configure(command=self.al_cambiar_pestana)
 
-        # ==========================================
         # PESTAÑA 1: FORMULARIO DE REGISTRO
-        # ==========================================
         self.frame_form = ctk.CTkFrame(self.tab_registro, corner_radius=10)
         self.frame_form.pack(pady=10, padx=20, fill="both", expand=True)
 
@@ -62,9 +60,7 @@ class BiblioManagerApp(ctk.CTk):
         self.lbl_estado = ctk.CTkLabel(self.tab_registro, text="", font=ctk.CTkFont(size=13))
         self.lbl_estado.pack()
 
-        # ==========================================
         # PESTAÑA 2: TABLA DE INVENTARIO
-        # ==========================================
         self.lbl_inv_titulo = ctk.CTkLabel(self.tab_inventario, text="Inventario Actualizado", font=ctk.CTkFont(size=16, weight="bold"))
         self.lbl_inv_titulo.pack(pady=(10, 5))
 
